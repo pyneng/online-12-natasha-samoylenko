@@ -253,7 +253,7 @@ def send_tasks_to_check(passed_tasks, git_add_all=False):
     if git_add_all:
         call_command("git add .")
     call_command(f'git commit -m "{message}"')
-	windows = True if system_name().lower() == "windows" else False
+    windows = True if system_name().lower() == "windows" else False
 
     if windows:
         git_push()
